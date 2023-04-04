@@ -2,7 +2,8 @@
  * Customer.java
  * This is a POJO class for Customer entity
  * @author Sinentlahla Pindani 219081328
- * 04 April 2023
+ * 04
+ * April 2023
  */
 
 package domain;
