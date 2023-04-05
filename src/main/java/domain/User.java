@@ -11,7 +11,6 @@ package domain;
 public class User {
     private int userId;
     private String userName;
-    private String userSurname;
     private String userAddress;
     private String userEmail;
     private String userPhone;
@@ -23,7 +22,6 @@ public class User {
     private User(Builder builder) {
         this.userId = builder.userId;
         this.userName = builder.userName;
-        this.userSurname = builder.userSurname;
         this.userAddress = builder.userAddress;
         this.userEmail = builder.userEmail;
         this.userPhone = builder.userPhone;
@@ -43,14 +41,6 @@ public class User {
 
     public void setUserName(String userName) {
         this.userName = userName;
-    }
-
-    public String getUserSurname() {
-        return userSurname;
-    }
-
-    public void setUserSurname(String userSurname) {
-        this.userSurname = userSurname;
     }
 
     public String getUserAddress() {
@@ -82,7 +72,6 @@ public class User {
         return "User{" +
                 "userId: " + userId +
                 "userName: " + userName + '\'' +
-                "userSurname: " + userSurname + '\'' +
                 "userAddress: " + userAddress + '\'' +
                 "userEmail: " + userEmail + '\'' +
                 "userPhone: " + userPhone + '\'' +
@@ -92,18 +81,12 @@ public class User {
     public static class Builder {
         private int userId;
         private String userName;
-        private String userSurname;
         private String userAddress;
         private String userEmail;
         private String userPhone;
 
         public Builder setUserName(String userName) {
             this.userName = userName;
-            return this;
-        }
-
-        public Builder setUserSurname(String userSurname) {
-            this.userSurname = userSurname;
             return this;
         }
 
@@ -125,7 +108,6 @@ public class User {
         public Builder builder(User user) {
             this.userId = user.userId;
             this.userName = user.userName;
-            this.userSurname = user.userSurname;
             this.userAddress = user.userAddress;
             this.userEmail = user.userEmail;
             this.userPhone = user.userPhone;
