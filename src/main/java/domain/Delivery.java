@@ -95,7 +95,7 @@ public class Delivery {
             return this;
         }
 
-        public Builder deliveryDate(Date deliveryDate) {
+        public Builder dateOfDelivery(Date deliveryDate) {
             this.deliveryDate = deliveryDate;
             return this;
         }
