@@ -28,6 +28,14 @@ public class Transaction {
         this.currency = currency;
         this.status = status;
     }
+    //---------------Builder----------------
+    private Transaction(Builder builder){
+        this.transactionReport_ID = builder.transactionReport_ID;
+        this.transactionReport_Type = builder.transactionReport_Type;
+        this.date_Of_Transaction = builder.date_Of_Transaction;
+        this.amount = builder.amount;
+        this.currency = builder.currency;
+    }
 
     //--------------Getters----------------------
     public int getTransactionReport_ID() {return transactionReport_ID;}
@@ -67,6 +75,61 @@ public class Transaction {
                 ", currency=" + currency +
                 ", status='" + status + '\'' +
                 '}';
+    }
+    //---------------Builder---------------------------
+    public static class Builder{
+        public int transactionReport_ID;
+        public String transactionReport_Type;
+        public Date date_Of_Transaction;
+        public int amount;
+        public int currency;
+        public String status;
+
+        public Builder setTransactionReport(int transactionReport_ID){
+            this.transactionReport_ID = transactionReport_ID;
+            return this;
+        }
+
+        public Builder setTransactionReport_Type(String transactionReport_Type){
+            this.transactionReport_Type = transactionReport_Type;
+            return this;
+        }
+
+        public Builder setDate_Of_Transaction(Date date_Of_Transaction){
+            this.date_Of_Transaction = date_Of_Transaction;
+            return this;
+        }
+
+        public Builder setAmount(int amount){
+            this.amount = amount;
+            return this;
+        }
+
+        public Builder setCurrency(int currency){
+            this.currency = currency;
+            return this;
+        }
+
+        public Builder setStatus(String status){
+            this.status = status;
+            return this;
+        }
+
+        public Builder builder(Transaction transaction) {
+            this.transactionReport_ID = transaction.transactionReport_ID;
+            this.transactionReport_Type = transaction.transactionReport_Type;
+            this.date_Of_Transaction = transaction.date_Of_Transaction;
+            this.amount = transaction.amount;
+            this.currency = transaction.currency;
+            this.status = transaction.status;
+            return this;
+        }
+
+        public Transaction build(){
+
+            return new Transaction(this);
+        }
+
     }
 }
 

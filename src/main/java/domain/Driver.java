@@ -1,4 +1,7 @@
 package domain;
+
+import java.util.Date;
+
 /**
  * POJO Class Driver
  * Name: Gilberto Silva
@@ -13,12 +16,10 @@ public class Driver {
     private int phone_Number;
     private String email;
 
-    public Driver() {
-    }
+    //-----------Constructors--------------
+    public Driver() {}
 
-    public Driver(int driver_ID) {
-        this.driver_ID = driver_ID;
-    }
+    public Driver(int driver_ID) {this.driver_ID = driver_ID;}
 
     public Driver(int driver_ID, String first_Name, String last_Name, int driver_License_Number, String vehicle_Information, int phone_Number, String email) {
         this.driver_ID = driver_ID;
@@ -28,6 +29,16 @@ public class Driver {
         this.vehicle_Information = vehicle_Information;
         this.phone_Number = phone_Number;
         this.email = email;
+    }
+    //---------------Builder----------------
+    private Driver(Builder builder){
+        this.driver_ID = builder.driver_ID;
+        this.first_Name = builder.first_Name;
+        this.last_Name = builder.last_Name;
+        this.driver_License_Number = builder.driver_License_Number;
+        this.vehicle_Information = builder.vehicle_Information;
+        this.phone_Number = builder.phone_Number;
+        this.email = builder.email;
     }
 
     //------------Getters--------------
@@ -71,6 +82,68 @@ public class Driver {
                 ", phone_Number=" + phone_Number +
                 ", email='" + email + '\'' +
                 '}';
+    }
+    //---------------Builder---------------------------
+    public static class Builder{
+        private int driver_ID;
+        private String first_Name;
+        private String last_Name;
+        private int driver_License_Number;
+        private String vehicle_Information;
+        private int phone_Number;
+        private String email;
+
+        public Builder setDriver_ID(int driver_ID){
+            this.driver_ID = driver_ID;
+            return this;
+        }
+
+        public Builder setFirst_Name(String first_Name){
+            this.first_Name = first_Name;
+            return this;
+        }
+
+        public Builder setLast_Name(String last_Name){
+            this.last_Name = last_Name;
+            return this;
+        }
+
+        public Builder setDriver_License_Number(int driver_License_Number){
+            this.driver_License_Number = driver_License_Number;
+            return this;
+        }
+
+        public Builder setVehicle_Information(String vehicle_Information){
+            this.vehicle_Information = vehicle_Information;
+            return this;
+        }
+
+        public Builder phone_Number(int phone_Number){
+            this.phone_Number = phone_Number;
+            return this;
+        }
+
+        public Builder email(String email){
+            this.email = email;
+            return this;
+        }
+
+        public Builder builder(Driver driver) {
+            this.driver_ID = driver.driver_ID;
+            this.first_Name = driver.first_Name;
+            this.last_Name = driver.last_Name;
+            this.driver_License_Number = driver.driver_License_Number;
+            this.vehicle_Information = driver.vehicle_Information;
+            this.phone_Number = driver.phone_Number;
+            this.email = driver.email;
+            return this;
+        }
+
+        public Driver build(){
+
+            return new Driver(this);
+        }
+
     }
 
 }
