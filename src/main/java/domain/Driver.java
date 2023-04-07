@@ -118,12 +118,12 @@ public class Driver {
             return this;
         }
 
-        public Builder phone_Number(int phone_Number){
+        public Builder setPhone_Number(int phone_Number){
             this.phone_Number = phone_Number;
             return this;
         }
 
-        public Builder email(String email){
+        public Builder setEmail(String email){
             this.email = email;
             return this;
         }
