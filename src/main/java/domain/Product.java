@@ -15,7 +15,10 @@ public class Product {
     private String productItem;
     private String productDescription;
 
-    private Product(Builder builder){
+    public Product(){
+
+    }
+    public Product(Builder builder){
         this.productId =  builder.productId;
         this.productNum = builder.productNum;
         this.productType = builder.productType;
