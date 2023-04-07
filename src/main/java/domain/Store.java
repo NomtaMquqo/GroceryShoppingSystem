@@ -14,7 +14,7 @@ public class Store {
     private String storeAddress;
     private String storeDescription;
 
-    private Store(){
+    public Store(){
 
     }
 
