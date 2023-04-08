@@ -34,7 +34,7 @@ class CustomerFactoryTest {
 
     @Test
     public void test(){
-        Customer customer = CustomerFactory.createCustomer("Sinentlahla","Pindani","0786236823","SinentlahlaPindanicom","DT498 SiteC Khayelitsha");
+        Customer customer = CustomerFactory.createCustomer("Sinentlahla","Pindani","0786236823","SinentlahlaPindani@gmail.com","DT498 SiteC Khayelitsha");
         System.out.println(customer.toString());
         assertNotNull(customer);
     }
