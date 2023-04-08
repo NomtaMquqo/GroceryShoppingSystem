@@ -13,23 +13,12 @@ public class Driver {
     private String last_Name;
     private int driver_License_Number;
     private String vehicle_Information;
-    private int phone_Number;
+    private long phone_Number;
     private String email;
 
     //-----------Constructors--------------
     public Driver() {}
 
-    public Driver(int driver_ID) {this.driver_ID = driver_ID;}
-
-    public Driver(int driver_ID, String first_Name, String last_Name, int driver_License_Number, String vehicle_Information, int phone_Number, String email) {
-        this.driver_ID = driver_ID;
-        this.first_Name = first_Name;
-        this.last_Name = last_Name;
-        this.driver_License_Number = driver_License_Number;
-        this.vehicle_Information = vehicle_Information;
-        this.phone_Number = phone_Number;
-        this.email = email;
-    }
     //---------------Builder----------------
     private Driver(Builder builder){
         this.driver_ID = builder.driver_ID;
@@ -52,7 +41,7 @@ public class Driver {
 
     public String getLast_Name() {return last_Name;}
 
-    //------------Setters--------------
+
     public void setLast_Name(String last_Name) {this.last_Name = last_Name;}
 
     public int getDriver_License_Number() {return driver_License_Number;}
@@ -63,9 +52,9 @@ public class Driver {
 
     public void setVehicle_Information(String vehicle_Information) {this.vehicle_Information = vehicle_Information;}
 
-    public int getPhone_Number() {return phone_Number;}
+    public long getPhone_Number() {return phone_Number;}
 
-    public void setPhone_Number(int phone_Number) {this.phone_Number = phone_Number;}
+    public void setPhone_Number(long phone_Number) {this.phone_Number = phone_Number;}
 
     public String getEmail() {return email;}
 
@@ -90,7 +79,7 @@ public class Driver {
         private String last_Name;
         private int driver_License_Number;
         private String vehicle_Information;
-        private int phone_Number;
+        private long phone_Number;
         private String email;
 
         public Builder setDriver_ID(int driver_ID){
@@ -118,7 +107,7 @@ public class Driver {
             return this;
         }
 
-        public Builder setPhone_Number(int phone_Number){
+        public Builder setPhone_Number(long phone_Number){
             this.phone_Number = phone_Number;
             return this;
         }
@@ -128,7 +117,7 @@ public class Driver {
             return this;
         }
 
-        public Builder builder(Driver driver) {
+        public Builder copy(Driver driver) {
             this.driver_ID = driver.driver_ID;
             this.first_Name = driver.first_Name;
             this.last_Name = driver.last_Name;
