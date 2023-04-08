@@ -7,7 +7,7 @@ import java.util.Date;
  * Name: Gilberto Silva
  * Student: 218239300
  */
-public class Transaction {
+public class TransactionReport {
     public int transactionReport_ID;
     public String transactionReport_Type;
     public Date date_Of_Transaction;
@@ -16,20 +16,10 @@ public class Transaction {
     public String status;
 
     //-------------Constructor----------------------
-    public Transaction() {}
+    public TransactionReport() {}
 
-    public Transaction(int transactionReport_ID) {this.transactionReport_ID = transactionReport_ID;}
-
-    public Transaction(int transactionReport_ID, String transactionReport_Type, Date date_Of_Transaction, int amount, int currency, String status) {
-        this.transactionReport_ID = transactionReport_ID;
-        this.transactionReport_Type = transactionReport_Type;
-        this.date_Of_Transaction = date_Of_Transaction;
-        this.amount = amount;
-        this.currency = currency;
-        this.status = status;
-    }
     //---------------Builder----------------
-    private Transaction(Builder builder){
+    private TransactionReport(Builder builder){
         this.transactionReport_ID = builder.transactionReport_ID;
         this.transactionReport_Type = builder.transactionReport_Type;
         this.date_Of_Transaction = builder.date_Of_Transaction;
@@ -115,7 +105,7 @@ public class Transaction {
             return this;
         }
 
-        public Builder builder(Transaction transaction) {
+        public Builder copy(TransactionReport transaction) {
             this.transactionReport_ID = transaction.transactionReport_ID;
             this.transactionReport_Type = transaction.transactionReport_Type;
             this.date_Of_Transaction = transaction.date_Of_Transaction;
@@ -125,9 +115,9 @@ public class Transaction {
             return this;
         }
 
-        public Transaction build(){
+        public TransactionReport build(){
 
-            return new Transaction(this);
+            return new TransactionReport(this);
         }
 
     }

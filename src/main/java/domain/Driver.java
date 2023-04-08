@@ -19,17 +19,6 @@ public class Driver {
     //-----------Constructors--------------
     public Driver() {}
 
-    public Driver(int driver_ID) {this.driver_ID = driver_ID;}
-
-    public Driver(int driver_ID, String first_Name, String last_Name, int driver_License_Number, String vehicle_Information, int phone_Number, String email) {
-        this.driver_ID = driver_ID;
-        this.first_Name = first_Name;
-        this.last_Name = last_Name;
-        this.driver_License_Number = driver_License_Number;
-        this.vehicle_Information = vehicle_Information;
-        this.phone_Number = phone_Number;
-        this.email = email;
-    }
     //---------------Builder----------------
     private Driver(Builder builder){
         this.driver_ID = builder.driver_ID;
@@ -128,7 +117,7 @@ public class Driver {
             return this;
         }
 
-        public Builder builder(Driver driver) {
+        public Builder copy(Driver driver) {
             this.driver_ID = driver.driver_ID;
             this.first_Name = driver.first_Name;
             this.last_Name = driver.last_Name;
