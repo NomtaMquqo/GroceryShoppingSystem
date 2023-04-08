@@ -13,9 +13,9 @@ public class Cart {
     private BufferedImage productImage;
     private String productName;
     private String productDescription;
-    private int productPrice;
+    private double productPrice;
     private int productQuantity;
-    private int totalPrice;
+    private double totalPrice;
 
     private Cart(){
         //
@@ -63,11 +63,11 @@ public class Cart {
         this.productDescription = productDescription;
     }
 
-    public int getProductPrice() {
+    public double getProductPrice() {
         return productPrice;
     }
 
-    public void setProductPrice(int productPrice) {
+    public void setProductPrice(double productPrice) {
         this.productPrice = productPrice;
     }
 
@@ -79,11 +79,11 @@ public class Cart {
         this.productQuantity = productQuantity;
     }
 
-    public int getTotalPrice() {
+    public double getTotalPrice() {
         return totalPrice;
     }
 
-    public void setTotalPrice(int totalPrice) {
+    public void setTotalPrice(double totalPrice) {
         this.totalPrice = totalPrice;
     }
 
@@ -105,9 +105,9 @@ public class Cart {
         private BufferedImage productImage;
         private String productName;
         private String productDescription;
-        private int productPrice;
+        private double productPrice;
         private int productQuantity;
-        private int totalPrice;
+        private double totalPrice;
 
         public Builder setCustomerId(int customerId) {
             this.customerId = customerId;
@@ -129,7 +129,7 @@ public class Cart {
             return this;
         }
 
-        public Builder setProductPrice(int productPrice) {
+        public Builder setProductPrice(double productPrice) {
             this.productPrice = productPrice;
             return this;
         }
@@ -139,7 +139,7 @@ public class Cart {
             return this;
         }
 
-        public Builder setTotalPrice(int totalPrice) {
+        public Builder setTotalPrice(double totalPrice) {
             this.totalPrice = totalPrice;
             return this;
         }
