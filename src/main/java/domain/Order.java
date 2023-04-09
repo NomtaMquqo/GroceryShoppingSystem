@@ -1,7 +1,7 @@
 package domain;
 
 public class Order {
-    private int id;
+    private String id;
     private String orderNumber;
     private String type;
     private String description;
@@ -16,11 +16,11 @@ public class Order {
         this.customer = builder.customer;
     }
 
-    public int getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(String id) {
         this.id = id;
     }
 
@@ -57,14 +57,14 @@ public class Order {
     }
 
     public static class Builder {
-        private int id;
+        private String id;
         private String orderNumber;
         private String type;
         private String description;
 
         private Customer customer;
 
-        public Builder orderId(int id) {
+        public Builder orderId(String id) {
             this.id = id;
             return this;
         }
