@@ -1,3 +1,10 @@
+/**
+ * Delivery.java
+ * This is a POJO class for delivery entity
+ * @author Nomta Mquqo 217296580
+ * 04 April 2023
+ */
+
 package domain;
 
 import java.util.Date;
