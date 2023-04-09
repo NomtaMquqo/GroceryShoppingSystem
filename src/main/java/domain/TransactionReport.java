@@ -3,18 +3,22 @@ package domain;
 /**
  * POJO Class Transaction
  * @author: Gilberto Silva
+
  * Student: 218239300
  */
 public class TransactionReport {
     public int transactionReport_ID;
     public String transactionReport_Type;
+
     public String date_Of_Transaction;
     public double amount;
     public String currency;
+
     public String status;
 
     //-------------Constructor----------------------
     public TransactionReport() {}
+
     //---------------Builder----------------
     private TransactionReport(Builder builder){
         this.transactionReport_ID = builder.transactionReport_ID;
@@ -34,6 +38,7 @@ public class TransactionReport {
     public double getAmount() {return amount;}
 
     public String getCurrency() {return currency;}
+
 
     public String getStatus() {return status;}
 
@@ -67,9 +72,11 @@ public class TransactionReport {
     public static class Builder{
         public int transactionReport_ID;
         public String transactionReport_Type;
+
         public String date_Of_Transaction;
         public double amount;
         public String currency;
+
         public String status;
 
         public Builder setTransactionReport(int transactionReport_ID){
@@ -82,17 +89,23 @@ public class TransactionReport {
             return this;
         }
 
+
         public Builder setDate_Of_Transaction(String date_Of_Transaction){
+
             this.date_Of_Transaction = date_Of_Transaction;
             return this;
         }
 
+
         public Builder setAmount(double amount){
+
             this.amount = amount;
             return this;
         }
 
+
         public Builder setCurrency(String currency){
+
             this.currency = currency;
             return this;
         }
@@ -109,6 +122,7 @@ public class TransactionReport {
             this.amount = transactionReport.amount;
             this.currency = transactionReport.currency;
             this.status = transactionReport.status;
+
             return this;
         }
 
