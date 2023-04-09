@@ -1,3 +1,10 @@
+
+/**
+ * DeliveryFactory.java
+ * This is a factory class for delivery entity
+ * @author Nomta Mquqo 217296580
+ * 04 April 2023
+ */
 package factory;
 
 import domain.Customer;
