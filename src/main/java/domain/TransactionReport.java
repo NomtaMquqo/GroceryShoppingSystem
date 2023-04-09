@@ -1,13 +1,12 @@
 package domain;
 
 /**
- * POJO Class Transaction
- * @author: Gilberto Silva
-
- * Student: 218239300
+ * Transaction.java
+ * @author: Gilberto Silva (218239300)
+ * Date: 07 April 2023
  */
 public class TransactionReport {
-    public int transactionReport_ID;
+    public String transactionReport_ID;
     public String transactionReport_Type;
 
     public String date_Of_Transaction;
@@ -29,7 +28,7 @@ public class TransactionReport {
     }
 
     //--------------Getters----------------------
-    public int getTransactionReport_ID() {return transactionReport_ID;}
+    public String getTransactionReport_ID() {return transactionReport_ID;}
 
     public String getTransactionReport_Type() {return transactionReport_Type;}
 
@@ -43,7 +42,7 @@ public class TransactionReport {
     public String getStatus() {return status;}
 
     //------------------Setters-------------------------
-    public void setTransactionReport_ID(int transactionReport_ID) {this.transactionReport_ID = transactionReport_ID;}
+    public void setTransactionReport_ID(String transactionReport_ID) {this.transactionReport_ID = transactionReport_ID;}
 
     public void setTransactionReport_Type(String transactionReport_Type) {this.transactionReport_Type = transactionReport_Type;}
 
@@ -70,7 +69,7 @@ public class TransactionReport {
     }
     //---------------Builder---------------------------
     public static class Builder{
-        public int transactionReport_ID;
+        public String transactionReport_ID;
         public String transactionReport_Type;
 
         public String date_Of_Transaction;
@@ -79,7 +78,7 @@ public class TransactionReport {
 
         public String status;
 
-        public Builder setTransactionReport(int transactionReport_ID){
+        public Builder setTransactionReport(String transactionReport_ID){
             this.transactionReport_ID = transactionReport_ID;
             return this;
         }

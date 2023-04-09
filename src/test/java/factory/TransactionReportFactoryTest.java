@@ -1,9 +1,9 @@
 package factory;
 
 /**
- * Transaction Report Factory Test Class
- * @author: Gilberto Silva
- * student number: 218239300
+ * TransactionReportFactoryTest.java
+ * @author: Gilberto Silva (218239300)
+ * Date: 08 April 2023
  */
 
 import domain.TransactionReport;
@@ -31,7 +31,7 @@ class TransactionReportFactoryTest {
 
     @Test
     public void test(){
-        TransactionReport transactionReport = TransactionReportFactory.createTransactionReport(032, "purchase", "Thu, Sep 29 2022",10.000, "USD", "available");
+        TransactionReport transactionReport = TransactionReportFactory.createTransactionReport("ACD00032", "purchase", "Thu, Sep 29 2022",10.000, "USD", "pending");
     }
 
     @Test
@@ -48,7 +48,7 @@ class TransactionReportFactoryTest {
     void testTimeout(){System.out.println("Time has passed");}
 
     @Test
-    @Disabled("Deisabled ERROR 808")
+    @Disabled("Disabled ERROR 808")
 
     void testWillBeSkipped(){}
 }

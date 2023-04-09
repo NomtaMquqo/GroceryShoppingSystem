@@ -1,9 +1,9 @@
 package factory;
 
 /**
- * Transaction Report Factory Class
- * @author: Gilberto Silva
- * student number: 218239300
+ * TransactionReportFactory.java
+ * @author: Gilberto Silva (218239300)
+ * Date: 08 April 2023
  */
 
 import domain.TransactionReport;
@@ -11,7 +11,7 @@ import util.Helper;
 import java.util.Date;
 
 public class TransactionReportFactory {
-    public static TransactionReport createTransactionReport(int transactionReport_ID, String transactionReport_Type, String date_Of_Transaction, double amount, String currency, String status){
+    public static TransactionReport createTransactionReport(String transactionReport_ID, String transactionReport_Type, String date_Of_Transaction, double amount, String currency, String status){
        if (Helper.isNullorEmpty(transactionReport_Type) || Helper.isNullorEmpty(status))
            return null;
        ;

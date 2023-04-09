@@ -1,9 +1,9 @@
 package factory;
 
 /**
-* Driver Factory Test Class
-* @author: Gilberto Silva
-* student number: 218239300
+* DriverFactoryTest.java
+* @author: Gilberto Silva (218239300)
+* Date: 08 April 2023
 */
 
 import domain.Driver;
@@ -31,7 +31,7 @@ class DriverFactoryTest {
 
     @Test
     public void test(){
-        Driver driver = DriverFactory.createDriver(0001, "Nicolau", "Sanchez", 987654321, "Toyota Etios, White, CAA 54321", 06, "nicolauSanchez91@gmail.com");
+        Driver driver = DriverFactory.createDriver("ABC0001", "Nicolau", "Sanchez", 987654321, "Toyota Etios, White, CAA 54321", 0625434565, "nicolauSanchez91@gmail.com");
         System.out.println(driver.toString());
         assertNotNull(driver);
     }
@@ -46,7 +46,7 @@ class DriverFactoryTest {
 
     @Test
     @Timeout(value = 10000, unit = TimeUnit.MILLISECONDS)
-    void testTimeout(){System.out.println("Timeout has passed");}
+    void testTimeout(){System.out.println("Time has passed");}
 
     @Test
     @Disabled("Disabled ERROR 808 ")
