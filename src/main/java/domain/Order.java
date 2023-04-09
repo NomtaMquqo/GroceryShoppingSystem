@@ -1,3 +1,10 @@
+
+/**
+ * Order.java
+ * This is a POJO class for order entity
+ * @author Nomta Mquqo 217296580
+ * 04 April 2023
+ */
 package domain;
 
 public class Order {
