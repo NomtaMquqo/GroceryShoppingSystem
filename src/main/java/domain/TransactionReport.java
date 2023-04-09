@@ -1,10 +1,8 @@
 package domain;
 
-import java.util.Date;
-
 /**
  * POJO Class Transaction
- * Name: Gilberto Silva
+ * @author: Gilberto Silva
  * Student: 218239300
  */
 public class TransactionReport {

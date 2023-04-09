@@ -1,5 +1,11 @@
 package factory;
 
+/**
+ * Transaction Report Factory Class
+ * @author: Gilberto Silva
+ * student number: 218239300
+ */
+
 import domain.TransactionReport;
 import util.Helper;
 import java.util.Date;
