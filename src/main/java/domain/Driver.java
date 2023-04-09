@@ -1,12 +1,12 @@
 package domain;
 
 /**
- * POJO Class Driver
- * @author: Gilberto Silva
- * Student: 218239300
+ * Driver.java
+ * @author: Gilberto Silva (218239300)
+ * Date: 07 April 2023
  */
 public class Driver {
-    private int driver_ID;
+    private String driver_ID;
     private String first_Name;
     private String last_Name;
     private int driver_License_Number;
@@ -29,9 +29,9 @@ public class Driver {
     }
 
     //------------Getters--------------
-    public int getDriver_ID() {return driver_ID;}
+    public String getDriver_ID() {return driver_ID;}
 
-    public void setDriver_ID(int driver_ID) {this.driver_ID = driver_ID;}
+    public void setDriver_ID(String driver_ID) {this.driver_ID = driver_ID;}
 
     public String getFirst_Name() {return first_Name;}
 
@@ -72,7 +72,7 @@ public class Driver {
     }
     //---------------Builder---------------------------
     public static class Builder{
-        private int driver_ID;
+        private String driver_ID;
         private String first_Name;
         private String last_Name;
         private int driver_License_Number;
@@ -80,7 +80,7 @@ public class Driver {
         private long phone_Number;
         private String email;
 
-        public Builder setDriver_ID(int driver_ID){
+        public Builder setDriver_ID(String driver_ID){
             this.driver_ID = driver_ID;
             return this;
         }
